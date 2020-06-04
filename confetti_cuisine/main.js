@@ -52,6 +52,16 @@ router.get("/Solomon.jpg", (req, res) => {
   utils.getFile("public/images/Solomon.jpg", res);
 });
 
+router.get("/Jane.jpg", (req, res) => {
+  res.writeHead(httpStatus.OK, contentTypes.jpg);
+  utils.getFile("public/images/Jane.jpg", res);
+});
+
+router.get("/Aaron.jpg", (req, res) => {
+  res.writeHead(httpStatus.OK, contentTypes.jpg);
+  utils.getFile("public/images/Aaron.jpg", res);
+});
+
 router.get("/Ben.jpg", (req, res) => {
   res.writeHead(httpStatus.OK, contentTypes.jpg);
   utils.getFile("public/images/Ben.jpg", res);
@@ -90,6 +100,16 @@ router.get("/Ben.html", (req, res) => {
 router.get("/Solomon.html", (req, res) => {
   res.writeHead(httpStatus.OK, contentTypes.html);
   utils.getFile("views/Solomon.html", res);
+});
+
+router.get("/Aaron.html", (req, res) => {
+  res.writeHead(httpStatus.OK, contentTypes.html);
+  utils.getFile("views/Aaron.html", res);
+});
+
+router.get("/Jane.html", (req, res) => {
+  res.writeHead(httpStatus.OK, contentTypes.html);
+  utils.getFile("views/Jane.html", res);
 });
 
 http.createServer(router.handle).listen(port);
