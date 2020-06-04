@@ -42,6 +42,21 @@ router.get("/product.jpg", (req, res) => {
   utils.getFile("public/images/product.jpg", res);
 });
 
+router.get("/Leah.jpg", (req, res) => {
+  res.writeHead(httpStatus.OK, contentTypes.jpg);
+  utils.getFile("public/images/Leah.jpg", res);
+});
+
+router.get("/Solomon.jpg", (req, res) => {
+  res.writeHead(httpStatus.OK, contentTypes.jpg);
+  utils.getFile("public/images/Solomon.jpg", res);
+});
+
+router.get("/Ben.jpg", (req, res) => {
+  res.writeHead(httpStatus.OK, contentTypes.jpg);
+  utils.getFile("public/images/Ben.jpg", res);
+});
+
 router.get("/confetti_cuisine.css", (req, res) => {
   res.writeHead(httpStatus.OK, contentTypes.css);
   utils.getFile("public/css/confetti_cuisine.css", res);
@@ -60,6 +75,21 @@ router.get("/confetti_cuisine.js", (req, res) => {
 router.get("/about.html", (req, res) => {
   res.writeHead(httpStatus.OK, contentTypes.html);
   utils.getFile("views/about.html", res);
+});
+
+router.get("/Leah.html", (req, res) => {
+  res.writeHead(httpStatus.OK, contentTypes.html);
+  utils.getFile("views/Leah.html", res);
+});
+
+router.get("/Ben.html", (req, res) => {
+  res.writeHead(httpStatus.OK, contentTypes.html);
+  utils.getFile("views/Ben.html", res);
+});
+
+router.get("/Solomon.html", (req, res) => {
+  res.writeHead(httpStatus.OK, contentTypes.html);
+  utils.getFile("views/Solomon.html", res);
 });
 
 http.createServer(router.handle).listen(port);
