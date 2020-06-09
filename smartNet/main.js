@@ -6,8 +6,6 @@ const express = require("express"),
   errorController = require("./controllers/errorController"),
   layouts = require("express-ejs-layouts");
 
-
-
 app.set("view engine", "ejs");
 app.set("port", process.env.PORT || 3000);
 app.use(
@@ -24,8 +22,6 @@ app.get("/", (req, res) => {
 });
 
 app.get("/courses", homeController.showCourses);
-app.post("/courses", homeController.showSelectedCourses);
-app.post("/courses/:email", homeController.showSelectedCourses);
 app.get("/contact", homeController.showSignUp);
 app.post("/contact", homeController.postedSignUpForm);
 

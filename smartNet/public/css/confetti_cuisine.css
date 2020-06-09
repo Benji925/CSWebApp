@@ -1,35 +1,40 @@
-@import url("https://fonts.googleapis.com/css?family=Baloo+Bhaina");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
 
 body {
   margin: 0;
-  padding-top: 150px;
+  padding-top: 170px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #625a56;
+  color: #ffffff;
+  background-color: #00000a;
+  background-image: url("/images/background.png");
 }
 
 #nav {
   width: 100%;
-  height: 110px;
+  height: 100px;
   padding: 20px 0 5px 0;
-  border-bottom: solid 8px #ee3114;
-  box-shadow: 10px 10px 10px #ccc;
+  border-bottom: solid 1px #1a003a;
+  box-shadow: 0px 20px 30px #1a001a;
   position: absolute;
+  color:black;
   top: 0;
+  background-image: url("/images/network.png");
+  background-size: cover;
+  background-position: bottom;
 }
 
 #title {
-  color: #625a56;
+  color: #ffffff;
   margin: 0;
-  font-family: "Baloo Bhaina";
+  font-family: "Quicksand", sans-serif;;
   text-transform: uppercase;
 }
 
 img {
   width: 100%;
 }
-
 a {
-  color: #333;
+  color: #F0F8FF;
   text-decoration: none;
 }
 
@@ -38,7 +43,7 @@ a {
 }
 
 .nav-align {
-  text-align: center;
+  text-align: left;
   padding: 3px 0;
 }
 
@@ -47,8 +52,8 @@ a {
 }
 
 .button {
-  background-color: #ed4a0f;
-  padding: 0.3vw 3vw;
+  background-color: #00000a;
+  padding: 0.3vw 5vw;
   border-radius: 2px;
   cursor: pointer;
   display: inline-block;
@@ -56,6 +61,6 @@ a {
 }
 
 .button:hover {
-  background-color: #ffb99f;
-  color: #ed4a0f;
+  background-color: #800080;
+  color: #white;
 }
