@@ -1,5 +1,5 @@
 "use strict";
-
+let Contact = require('../models/Contact')
 var courses = [
   {
     title: "Event Driven Cakes",
@@ -29,7 +29,35 @@ exports.showNewContact = (req, res) => {
   res.render("newContact");
 };
 
-exports.postedSignUpForm = (req, res) => {
-  let formData = req.body
-  res.render("thanks",{formData:formData});
-};
+exports.postedSignUpForm = async (req, res) => {
+  try {
+    let formData = req.body
+    let newContact = new Contact(
+      {
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        email: req.body.email,
+        contactWhen: req.body.contactWhen,
+        meetingLocation: req.body.meetingLocation,
+        company: req.body.company,
+        otherNotes: req.body.otherNotes,
+      })
+      await newContact.save()
+      res.redirect("/")
+  }
+  catch(e){
+    console.log("error")
+  }
+}
+
+exports.showContacts = async (req, res) => {
+    try{ 
+      res.locals.contacts = await Contact.find()
+      res.render("showContacts")
+    } catch(e){
+      console.log("error")
+    }
+  }
+
+
+

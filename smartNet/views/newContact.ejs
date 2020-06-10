@@ -4,37 +4,37 @@
 <div class="container" style="color: darkorchid">
     <h1>Meet someone new? Add their info here!</h1>
     <div className='form' id='addit'>
-        <form>
+        <form method = "Post" action = "/contact" >
             <div className="form-row">
                 <div className="form-group col-md-12">
                     <label htmlFor="firstName">First Name</label>
-                    <input type="text" className="form-control" id="firstName"/>
+                    <input type="text" className="form-control" name="firstName"/>
                     <label htmlFor="lastName">Last Name</label>
-                    <input type="text" className="form-control" id="lastName"/>
+                    <input type="text" className="form-control" name="lastName"/>
                 </div>
             </div>
             <div className="form-group">
                 <label htmlFor="company">Company</label>
-                <input type="text" className="form-control" id="company" placeholder="i.e. Google"/>
+                <input type="text" className="form-control" name="company" placeholder="i.e. Google"/>
             </div>
             <div className="form-group">
                 <label htmlFor="meetingLocation">Meeting Location</label>
-                <input type="text" className="form-control" id="meetingLocation"
+                <input type="text" className="form-control" name="meetingLocation"
                        placeholder="Linkedin, Networking event, etc."/>
             </div>
             <div className="form-row">
                 <div className="form-group col-md-6">
                     <label htmlFor="contactWhen">When should you reach out next?</label>
-                    <input type="date" className="form-control" id="contactWhen"/>
+                    <input type="date" className="form-control" name="contactWhen"/>
                 </div>
                 <div className="form-group col-md-6">
                     <label htmlFor="email">Email</label>
-                    <input type="email" className="form-control" id="email"/>
+                    <input type="email" className="form-control" name="email"/>
                 </div>
             </div>
             <div className="form-group">
                 <label htmlFor="notes">Other Notes</label>
-                <input type="text" className="form-control" id="notes"/>
+                <input type="text" className="form-control" name="notes"/>
             </div>
             <button type="submit" className="btn btn-primary">Add Contact</button>
 
