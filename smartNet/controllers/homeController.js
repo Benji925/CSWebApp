@@ -25,6 +25,10 @@ exports.showSignUp = (req, res) => {
   res.render("contact");
 };
 
+exports.showNewContact = (req, res) => {
+  res.render("newContact");
+};
+
 exports.postedSignUpForm = (req, res) => {
   let formData = req.body
   res.render("thanks",{formData:formData});
