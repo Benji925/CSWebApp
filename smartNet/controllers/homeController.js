@@ -51,13 +51,10 @@ exports.postedSignUpForm = async (req, res) => {
 }
 
 exports.showContacts = async (req, res) => {
-    try{ 
+    try{
       res.locals.contacts = await Contact.find()
       res.render("showContacts")
     } catch(e){
       console.log("error")
     }
   }
-
-
-
