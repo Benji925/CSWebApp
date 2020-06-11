@@ -97,6 +97,9 @@ a {
   height: 10px;
   float: right;
 }
+.notbold{
+    font-weight:normal
+}​
 
 #input {
   color: darkblue;
