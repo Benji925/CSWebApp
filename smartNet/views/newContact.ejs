@@ -1,37 +1,37 @@
-<div class="container" style="color: white">
-    <h1>Meet someone new? Add their info here!</h1>
+<div class="container" style="color: black">
+    <h1 style ="color: white">Meet someone new? Add their info here!</h1>
     <br></br>
     <div className='form' id='addit'>
         <form method = "Post" action = "/contact" >
             <div className="form-row">
                 <div className="form-group col-md-12">
-                    <label class = 'notbold'; htmlFor="firstName">First Name</label>
+                    <label class = 'notbold'; htmlFor="firstName"; style ="color: white">First Name</label>
                     <input type="text" className="form-control" name="firstName"/>
-                    <label class = 'notbold'; htmlFor="lastName">Last Name</label>
+                    <label class = 'notbold'; htmlFor="lastName"; style ="color: white">Last Name</label>
                     <input type="text" className="form-control" name="lastName"/>
                 </div>
             </div>
             <div className="form-group">
-                <label class = 'notbold'; htmlFor="company">Company</label>
+                <label class = 'notbold'; htmlFor="company"; style ="color: white">Company</label>
                 <input type="text" className="form-control" name="company" placeholder="i.e. Google"/>
             </div>
             <div className="form-group">
-                <label class = 'notbold'; htmlFor="meetingLocation">Meeting Location</label>
+                <label class = 'notbold'; htmlFor="meetingLocation"; style ="color: white">Meeting Location</label>
                 <input type="text" className="form-control" name="meetingLocation"
                        placeholder="Linkedin, Networking event, etc."/>
             </div>
             <div className="form-row">
                 <div className="form-group col-md-6">
-                    <label class = 'notbold'; htmlFor="contactWhen">When should you reach out next?</label>
+                    <label class = 'notbold'; htmlFor="contactWhen"; style ="color: white">When should you reach out next?</label>
                     <input type="date" className="form-control" name="contactWhen"/>
                 </div>
                 <div className="form-group col-md-6">
-                    <label class = 'notbold'; htmlFor="email">Email</label>
+                    <label class = 'notbold'; htmlFor="email"; style ="color: white">Email</label>
                     <input type="email" className="form-control" name="email"/>
                 </div>
             </div>
             <div className="form-group">
-                <label class = 'notbold'; htmlFor="notes">Other Notes</label>
+                <label class = 'notbold'; htmlFor="notes"; style ="color: white">Other Notes</label>
                 <input type="text" className="form-control" name="notes"/>
             </div>
             <button type="submit" className="btn btn-primary">Add Contact</button>
