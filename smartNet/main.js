@@ -34,6 +34,8 @@ app.get("/contact", homeController.showSignUp);
 app.post("/contact", homeController.postedSignUpForm);
 app.get("/newContact", homeController.showNewContact);
 app.get("/showContacts", homeController.showContacts);
+app.get("/about", homeController.about);
+app.post("/about", homeController.about);
 
 app.use(errorController.pageNotFoundError);
 app.use(errorController.internalServerError);

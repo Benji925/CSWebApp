@@ -1,9 +1,16 @@
 <% contacts.forEach(contact => { %>
-    <h5>
-      <%= contact.firstName %>
-      <%= contact.lastName %>
-      <%= contact.email %>
-      <%= contact.company %>
-      
-    </h5>
-    <% }); %>
+    
+<div className='card'>
+  <div className='card-body'>
+    <h2><%= contact.lastName %>, <%= contact.firstName %></h2>
+
+  </div>
+  <ul className='list-group list-group-flush' style='font-size: 25px;'>
+    <li className='list-group-item'>Company: <%= contact.company %></li>
+    <li className='list-group-item'>Email: <%= contact.email %></li>
+    <li className='list-group-item'>Email: <%= contact.meetingLocation %></li>
+    <li className='list-group-item'>Other Notes: <%= contact.otherNotes %></li>
+  </ul>
+</div>
+
+<% }); %>

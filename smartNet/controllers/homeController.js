@@ -29,6 +29,10 @@ exports.showNewContact = (req, res) => {
   res.render("newContact");
 };
 
+exports.about = (req, res) => {
+  res.render("about");
+};
+
 exports.postedSignUpForm = async (req, res) => {
   try {
     let formData = req.body
