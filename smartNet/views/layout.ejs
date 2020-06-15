@@ -17,9 +17,17 @@
 				<h1 id="title"> &ensp; Smartnet</h1>
 			</div>
   		<div class="two">
-				<a href="/">
-					<span class="button2">&ensp;&ensp;Sign In</span>
+			<% if (!loggedIn) {%>
+				<a href="/login">
+					<span class="button2">Login</span>
 				</a>
+				<% } else  { %>
+					<%= user.googleemail %>
+				<a href="/logout">
+					<span class="button2">Logout</span>
+				</a>
+				<% } %>
+				
 			</div>
 		</div>
 		<div class="col-sm nav-align">
