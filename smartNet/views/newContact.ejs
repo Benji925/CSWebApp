@@ -1,6 +1,7 @@
 <div class="container" style="color: black">
     <h1 style ="color: white">Meet someone new? Add their info here!</h1>
     <br></br>
+    <% if (loggedIn) { %>
     <div className='form' id='addit'>
         <form method = "Post" action = "/contact" >
             <div className="form-row">
@@ -38,4 +39,5 @@
 
         </form>
     </div>
+    <% } %>
 </div>

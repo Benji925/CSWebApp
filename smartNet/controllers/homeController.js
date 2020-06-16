@@ -42,6 +42,8 @@ exports.postedSignUpForm = async (req, res) => {
     let formData = req.body
     let newContact = new Contact(
       {
+
+        userId: req.user._id,
         firstName: req.body.firstName,
         lastName: req.body.lastName,
         email: req.body.email,
@@ -60,7 +62,7 @@ exports.postedSignUpForm = async (req, res) => {
 
 exports.showContacts = async (req, res) => {
     try{
-      res.locals.contacts = await Contact.find()
+      res.locals.contacts = await Contact.find({userId:req.user._id})
       res.render("showContacts")
     } catch(e){
       console.log("error")

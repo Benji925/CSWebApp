@@ -6,6 +6,9 @@ const express = require("express"),
   errorController = require("./controllers/errorController"),
   layouts = require("express-ejs-layouts");
   const authRouter = require('./routes/authentication');
+  const Contact = require('./models/Contact')
+
+  const isLoggedIn = authRouter.isLoggedIn
 
   const mongoose = require("mongoose");
   mongoose.connect(
@@ -36,6 +39,65 @@ app.get("/newContact", homeController.showNewContact);
 app.get("/showContacts", homeController.showContacts);
 app.get("/about", homeController.about);
 app.post("/about", homeController.about);
+
+
+app.get('/profiles',
+    isLoggedIn,
+    async (req,res,next) => {
+      try {
+        res.locals.profiles = await User.find({})
+        res.render('profiles')
+      }
+      catch(e){
+        next(e)
+      }
+    }
+  )
+
+app.use('/publicprofile/:userId',
+    async (req,res,next) => {
+      try {
+        let userId = req.params.userId
+        res.locals.profile = await User.findOne({_id:userId})
+        res.render('publicprofile')
+      }
+      catch(e){
+        console.log("Error in /profile/userId:")
+        next(e)
+      }
+    }
+)
+
+
+app.get('/profile',
+    isLoggedIn,
+    async (req,res) => {
+      let contacts = await Contact.count({userId:req.user._Id})
+      res.locals.numContacts = contacts
+      //double check^
+      res.render('profile')
+    })
+
+app.get('/editProfile',
+    isLoggedIn,
+    (req,res) => res.render('editProfile'))
+
+app.post('/editProfile',
+    isLoggedIn,
+    async (req,res,next) => {
+      try {
+        let username = req.body.username
+        let age = req.body.age
+        req.user.username = username
+        req.user.age = age
+        req.user.imageURL = req.body.imageURL
+        await req.user.save()
+        res.redirect('/profile')
+      } catch (error) {
+        next(error)
+      }
+
+    })
 
 
 
