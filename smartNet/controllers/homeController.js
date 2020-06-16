@@ -33,6 +33,10 @@ exports.about = (req, res) => {
   res.render("about");
 };
 
+exports.profile = (req,res) => {
+  res.render("profile")
+}
+
 exports.postedSignUpForm = async (req, res) => {
   try {
     let formData = req.body
