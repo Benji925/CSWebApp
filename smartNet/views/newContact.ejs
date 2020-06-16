@@ -1,7 +1,8 @@
 <div class="container" style="color: black">
+    <% if (loggedIn) { %>
     <h1 style ="color: white">Meet someone new? Add their info here!</h1>
     <br></br>
-    <% if (loggedIn) { %>
+    
     <div className='form' id='addit'>
         <form method = "Post" action = "/contact" >
             <div className="form-row">
@@ -39,5 +40,7 @@
 
         </form>
     </div>
+    <% } else { %>
+        <h1>Log in to add a new contact!</h1>
     <% } %>
 </div>
