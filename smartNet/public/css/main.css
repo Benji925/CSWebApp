@@ -8,6 +8,10 @@ body {
   background-color: rgb(186,182,183);
   color: black;
 }
+.dark-mode{
+  background-color :#00000a:
+  color: white;
+}
 #nav {
   width: 100%;
   height: 130px;
@@ -27,6 +31,11 @@ body {
   margin: 0;
   font-family: "Quicksand", sans-serif;;
   text-transform: uppercase;
+}
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 img {
@@ -64,6 +73,36 @@ a {
 }
 .button2 {
   background: url("/images/login.png") no-repeat;
+  background-size: contain;
+  background-color: #00000a;
+  padding: 0.2vw 2vw;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-block;
+  color: #fff;
+}
+.button3 {
+  background: url("/images/logout.png") no-repeat;
+  background-size: contain;
+  background-color: #00000a;
+  padding: 0.2vw 2vw;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-block;
+  color: #fff;
+}
+.button4 {
+  background: url("/images/darkmode.png") no-repeat;
+  background-size: contain;
+  background-color: #00000a;
+  padding: 0.3vw 1vw;
+  border-radius: 1px;
+  cursor: pointer;
+  display: inline-block;
+  color: #fff;
+}
+.button5 {
+  background: url("/images/lightmode.png") no-repeat;
   background-size: contain;
   background-color: #00000a;
   padding: 0.2vw 2vw;
