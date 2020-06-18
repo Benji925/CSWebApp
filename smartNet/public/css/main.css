@@ -143,10 +143,16 @@ a {
 .notbold{
     font-weight:normal
 }​
+img.one {
+  height: 200px;
+  width: 200px;
+}
 
 #input {
   color: darkblue;
 }
+
+#logo { height: 200px; width: 200px; overflow: hidden; }
 
  .card-body{
    background-color: #f7f0f7;
