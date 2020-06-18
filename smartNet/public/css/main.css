@@ -143,3 +143,15 @@ a {
 #input {
   color: darkblue;
 }
+
+ .card-body{
+   background-color: #f7f0f7;
+   color: #423e42;
+   font-family: "Quicksand", sans-serif;
+ }
+
+ .card-footer{
+   background-color: #e6d8e6;
+   font-family: "Quicksand", sans-serif;
+   color: #423e42;
+ }
