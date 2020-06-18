@@ -14,7 +14,7 @@
 	<div id="nav">
 		<div class="container2">
   		<div class="one">
-				<h1 id="title"> &ensp; Smartnet</h1>
+				<h1 id="title" style= "font-size: 3.5vmin"> &ensp; Smartnet</h1>
 			</div>
   		<div class="two">
 			<% if (!loggedIn) {%>
@@ -22,12 +22,12 @@
 					<span class="button2">&ensp;&ensp;Login</span>
 				</a>
 				<% } else  { %>
-					<p style="color:white;display:inline"><%= user.googleemail %></p>
+					<p style="color:white;display:inline;font-size: 1vw"><%= user.googleemail %></p>
 				<a href="/profile">
-					<span class="button2">&ensp;&ensp;Profile</span>
+					<span class="button2" style="font-size: 1vw">&ensp;&ensp;Profile</span>
 				</a>
 				<a href="/logout">
-					<span class="button3">&ensp;&ensp;Logout</span>
+					<span class="button3" style="font-size: 1vw">&ensp;&ensp;Logout</span>
 				</a>
 				<% } %>
 
