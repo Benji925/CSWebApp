@@ -1,18 +1,19 @@
 <% contacts.forEach(contact => { %>
+<div class="card" style="margin-left: 19%; margin-right: 19%; margin-bottom: 4%; border-style: solid; background-color: rgb(186,182,183); padding: .2%;">
+  <div class="card-body"style="text-align: center;">
     
-<div className='card'>
-  <div className='card-body'>
-    <h2><%= contact.lastName %>, <%= contact.firstName %></h2>
-
+    <h2 class="card-title"><%= contact.lastName %>, <%= contact.firstName %></h2>
+    <hr style= "border-top: 2px solid black"; width="50%">
+    <p class="card-text" style="padding:.5%; font-size:130%">
+    Company: <%= contact.company %> 
+    <br>
+    Email: <%= contact.email %>
+    <br>
+    Meeting Location: <%= contact.meetingLocation %>
+    <br>
+    Other Notes: <%= contact.otherNotes %>
+    </p>
   </div>
-  <ul className='list-group list-group-flush' style='font-size: 25px;'>
-    <li className='list-group-item'>Company: <%= contact.company %></li>
-    <li className='list-group-item'>Email: <%= contact.email %></li>
-    <li className='list-group-item'>Meeting Location: <%= contact.meetingLocation %></li>
-    <li className='list-group-item'>Other Notes: <%= contact.otherNotes %></li>
-  </ul>
 </div>
-
 <% }); %>
-
-
+    
