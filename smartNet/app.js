@@ -37,9 +37,17 @@ app.get("/contact", homeController.showSignUp);
 app.post("/contact", homeController.postedSignUpForm);
 app.get("/newContact", homeController.showNewContact);
 app.get("/showContacts", homeController.showContacts);
+
 app.get("/about", homeController.about);
 app.post("/about", homeController.about);
 
+
+app.get("/delete/:id", 
+  async (req,res,next) => {
+    console.log("id = " + req.params.id)
+    await Contact.remove({_id:req.params.id})
+    res.redirect("/showContacts")
+})
 
 app.get('/profiles',
     isLoggedIn,
