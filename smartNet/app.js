@@ -80,12 +80,8 @@ app.use('/publicprofile/:userId',
 app.get('/profile',
     isLoggedIn,
     async (req,res) => {
-      let contacts = await Contact.find({userId:req.user._Id})
+      let contacts = await Contact.find({userId:req.user._id})
       res.locals.numContacts = contacts.length
-      console.log(JSON.stringify(contacts,null,2))
-      //res.locals.contacts = contacts
-
-      //double check^
       res.render('profile')
     })
 
